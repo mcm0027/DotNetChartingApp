@@ -6,6 +6,9 @@
     "jquery": "2.1.4",
     "jquery-validation": "1.14.0",
     "jquery-validation-unobtrusive": "3.2.4",
-    "chartist": "^0.9.7"
+    "chartist": "^0.9.7",
+    "angular": "^1.5.3",
+    "angular-animate": "^1.5.3",
+    "angular-touch": "^1.5.3"
   }
 }
