@@ -1,1 +1,1 @@
-﻿
+﻿$('#home-content').css()

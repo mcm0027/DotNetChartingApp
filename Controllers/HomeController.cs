@@ -13,16 +13,16 @@ namespace ChartingProject.Controllers
             return View();
         }
 
-        public IActionResult About()
+        public IActionResult Occupancy()
         {
-            ViewData["Message"] = "Your application description page.";
+            ViewData["Message"] = "The average occupancy rate by week.";
 
             return View();
         }
 
-        public IActionResult Contact()
+        public IActionResult NewToOld()
         {
-            ViewData["Message"] = "Your contact page.";
+            ViewData["Message"] = "The percentage of appartments occupied by new tenates, existing tenates and unoccupied units.";
 
             return View();
         }
