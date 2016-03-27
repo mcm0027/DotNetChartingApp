@@ -9,6 +9,10 @@
     padding-right: 15px;
 }
 
+#wrapper {
+    padding-top: 50px;
+}
+
 /* Set widths on the form inputs since otherwise they're 100% wide */
 input,
 select,
@@ -30,8 +34,4 @@ textarea {
     .carousel-caption {
         z-index: 10 !important;
     }
-}
-
-.ct-chart {
-    width: 400px;
 }

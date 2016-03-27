@@ -22,7 +22,7 @@
         @Html.ApplicationInsightsJavaScript(TelemetryConfiguration)
     </head>
     <body>
-        @*<div class="navbar navbar-inverse navbar-fixed-top">
+        <div class="navbar navbar-inverse navbar-fixed-top">
             <div class="container">
                 <div class="navbar-header">
                     <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
@@ -36,49 +36,17 @@
                 <div class="navbar-collapse collapse">
                     <ul class="nav navbar-nav">
                         <li><a asp-controller="Home" asp-action="Index">Home</a></li>
-                        <li><a asp-controller="Home" asp-action="About">About</a></li>
-                        <li><a asp-controller="Home" asp-action="Contact">Contact</a></li>
+                        <li><a asp-controller="Home" asp-action="About">Occupancy Rates</a></li>
+                        <li><a asp-controller="Home" asp-action="Contact">New to Old Tenants</a></li>
                     </ul>
-                    @await Html.PartialAsync("_LoginPartial")
                 </div>
             </div>
-        </div>*@
+        </div>
 
 
         <div id="wrapper">
-            <!-- Sidebar -->
-            <div id="sidebar-wrapper">
-                <ul class="sidebar-nav">
-                    <li class="sidebar-brand">
-                        <a href="#">
-                            Start Bootstrap
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">Dashboard</a>
-                    </li>
-                    <li>
-                        <a href="#">Shortcuts</a>
-                    </li>
-                    <li>
-                        <a href="#">Overview</a>
-                    </li>
-                    <li>
-                        <a href="#">Events</a>
-                    </li>
-                    <li>
-                        <a href="#">About</a>
-                    </li>
-                    <li>
-                        <a href="#">Services</a>
-                    </li>
-                    <li>
-                        <a href="#">Contact</a>
-                    </li>
-                </ul>
-            </div>
-            <!-- /#sidebar-wrapper -->
-            <div class="ct-chart ct-major-third"></div>
+         
+            
             <!-- /#page-content-wrapper -->
             <div class="container body-content">
                 @RenderBody()
@@ -87,11 +55,14 @@
                     <p>&copy; 2016 - ChartingProject</p>
                 </footer>
             </div>
+          </div>
          
             <environment names="Development">
                 <script src="~/lib/jquery/dist/jquery.js"></script>
                 <script src="~/lib/bootstrap/dist/js/bootstrap.js"></script>
                 <script src="~/lib/chartist/dist/chartist.js"></script>
+                <script src="~/lib/fusioncharts/js/fusioncharts.js"></script>
+                <script src="~/lib/fusioncharts/js/themes/fusioncharts.theme.fint.js"></script>
                 <script src="~/js/site.js" asp-append-version="true"></script>
             </environment>
             <environment names="Staging,Production">
