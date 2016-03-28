@@ -18,59 +18,18 @@ namespace ChartingProject.Migrations.Charting
 
             modelBuilder.Entity("ChartingProject.Models.Occupancy", b =>
                 {
-                    b.Property<string>("Month");
-
-                    b.Property<int>("Id");
-
-                    b.HasKey("Month");
-                });
-
-            modelBuilder.Entity("ChartingProject.Models.Percent", b =>
-                {
-                    b.Property<int>("Percent1")
+                    b.Property<long>("OccupanyKey")
                         .ValueGeneratedOnAdd();
 
-                    b.Property<string>("OccupancyMonth");
+                    b.Property<string>("Label");
 
-                    b.Property<int>("Percent2");
+                    b.Property<int>("Month");
 
-                    b.Property<int>("Percent3");
+                    b.Property<float>("Percent");
 
-                    b.Property<int>("Percent4");
+                    b.Property<int>("Year");
 
-                    b.HasKey("Percent1");
-                });
-
-            modelBuilder.Entity("ChartingProject.Models.Week", b =>
-                {
-                    b.Property<int>("weekId")
-                        .ValueGeneratedOnAdd();
-
-                    b.Property<string>("OccupancyMonth");
-
-                    b.Property<string>("Week1");
-
-                    b.Property<string>("Week2");
-
-                    b.Property<string>("Week3");
-
-                    b.Property<string>("Week4");
-
-                    b.HasKey("weekId");
-                });
-
-            modelBuilder.Entity("ChartingProject.Models.Percent", b =>
-                {
-                    b.HasOne("ChartingProject.Models.Occupancy")
-                        .WithMany()
-                        .HasForeignKey("OccupancyMonth");
-                });
-
-            modelBuilder.Entity("ChartingProject.Models.Week", b =>
-                {
-                    b.HasOne("ChartingProject.Models.Occupancy")
-                        .WithMany()
-                        .HasForeignKey("OccupancyMonth");
+                    b.HasKey("OccupanyKey");
                 });
         }
     }

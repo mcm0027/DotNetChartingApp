@@ -19,31 +19,18 @@ namespace ChartingProject.Models
         {
             if (!_context.Occupancies.Any())
             {
-                var june = new Occupancy()
+                var juneWeek1 = new Occupancy()
                 {
-                    Month = "June",
-                    Weeks = new List<Week>()
-                    {
-                        new Week() { Week1 = "Week 1" },
-                        new Week() { Week2 = "Week 2" },
-                        new Week() { Week3= "Week 3" },
-                        new Week() { Week4 = "Week 4" }
-                    }
-                    ,
-                    Percents = new List<Percent>()
-                    {
-                        new Percent() { Percent1 = 95 },
-                        new Percent() { Percent2 = 65 },
-                        new Percent() { Percent3 = 55 },
-                        new Percent() { Percent4 = 88 },
-                    }
+                    Year = 2016,
+                    Month = 1,
+                    Label = "Week 1",
+                    Percent = 56
+                    
                 };
 
-                //_context.Occupancies.Add(june);
-                //_context.Weeks.AddRange(june.Weeks);
-                //_context.Percents.AddRange(june.Percents);
+                _context.Occupancies.Add(juneWeek1);
 
-                //_context.SaveChanges();
+                _context.SaveChanges();
             }
         }
     }
