@@ -3,11 +3,19 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNet.Mvc;
+using ChartingProject.Models;
 
 namespace ChartingProject.Controllers
 {
     public class HomeController : Controller
     {
+        private ChartingContext _context;
+
+        public HomeController(ChartingContext context)
+        {
+            _context = context;
+        }
+
         public IActionResult Index()
         {
             return View();
@@ -16,8 +24,8 @@ namespace ChartingProject.Controllers
         public IActionResult Occupancy()
         {
             ViewData["Message"] = "The average occupancy rate by week.";
-
-            return View();
+            var occupancies = _context.Occupancies;
+            return View(occupancies);
         }
 
         public IActionResult NewToOld()
