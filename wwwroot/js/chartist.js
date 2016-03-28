@@ -6,22 +6,54 @@
     //occupancy data set
 
     var occupancy = [
-          {
-            "Weeks": ['Week1', 'Week2', 'Week3', 'Week4'],
-            "Percents": [95, 96, 98, 93]
-          },
-          {
-            "Weeks": ['Week1', 'Week2', 'Week3', 'Week4'],
-            "Percents": [98, 60, 99, 93]
-          },
-            {
-                "Weeks": ['Week1', 'Week2', 'Week3', 'Week4'],
-                "Percents": [98, 50, 99, 93]
-            },
-            {
-                "Weeks": ['Week1', 'Week2', 'Week3', 'Week4'],
-                "Percents": [100, 96, 99, 20]
-            }
+    {
+    "Weeks": ['Week1', 'Week2', 'Week3', 'Week4'],
+    "Percents": [95, 96, 98, 93]
+    },
+    {
+    "Weeks": ['Week1', 'Week2', 'Week3', 'Week4'],
+    "Percents": [98, 60, 99, 93]
+    },
+    {
+    "Weeks": ['Week1', 'Week2', 'Week3', 'Week4'],
+    "Percents": [98, 50, 99, 93]
+    },
+    {
+    "Weeks": ['Week1', 'Week2', 'Week3', 'Week4'],
+    "Percents": [100, 96, 80, 20]
+    },
+    {
+    "Weeks": ['Week1', 'Week2', 'Week3', 'Week4'],
+    "Percents": [95, 96, 98, 93]
+    },
+    {
+    "Weeks": ['Week1', 'Week2', 'Week3', 'Week4'],
+    "Percents": [98, 60, 99, 93]
+    },
+    {
+    "Weeks": ['Week1', 'Week2', 'Week3', 'Week4'],
+    "Percents": [98, 50, 99, 93]
+    },
+    {
+    "Weeks": ['Week1', 'Week2', 'Week3', 'Week4'],
+    "Percents": [100, 96, 80, 20]
+    },
+    {
+    "Weeks": ['Week1', 'Week2', 'Week3', 'Week4'],
+    "Percents": [95, 96, 98, 93]
+    },
+    {
+    "Weeks": ['Week1', 'Week2', 'Week3', 'Week4'],
+    "Percents": [98, 60, 99, 93]
+    },
+    {
+    "Weeks": ['Week1', 'Week2', 'Week3', 'Week4'],
+    "Percents": [98, 50, 99, 93]
+    },
+    {
+    "Weeks": ['Week1', 'Week2', 'Week3', 'Week4'],
+    "Percents": [100, 96, 80, 20]
+    }
 ];
 
 

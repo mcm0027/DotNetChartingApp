@@ -60,10 +60,11 @@ namespace ChartingProject
             // Add application services.
             services.AddTransient<IEmailSender, AuthMessageSender>();
             services.AddTransient<ISmsSender, AuthMessageSender>();
+            services.AddTransient<ChartingContextSeedData>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
-        public void Configure(IApplicationBuilder app, IHostingEnvironment env, ILoggerFactory loggerFactory)
+        public void Configure(IApplicationBuilder app, IHostingEnvironment env, ILoggerFactory loggerFactory, ChartingContextSeedData seeder)
         {
             loggerFactory.AddConsole(Configuration.GetSection("Logging"));
             loggerFactory.AddDebug();
@@ -109,6 +110,8 @@ namespace ChartingProject
                     name: "default",
                     template: "{controller=Home}/{action=Index}/{id?}");
             });
+            seeder.EnsureSeedData();
+
         }
 
         // Entry point for the application.

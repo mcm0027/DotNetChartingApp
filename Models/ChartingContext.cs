@@ -8,8 +8,15 @@ namespace ChartingProject.Models
 {
     public class ChartingContext : DbContext
     {
-        public DbSet<Occupancy> Occupancies { get; set; }
+        public ChartingContext()
+        {
+            Database.EnsureCreated();
+        }
 
+        public int Id { get; set; }
+        public DbSet<Occupancy> Occupancies { get; set; }
+        public DbSet<Week> Weeks { get; set; }
+        public DbSet<Percent> Percents { get; set; }
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             var connectionString = "Server=(localdb)\\ProjectsV12;Database=ChartingDB;Trusted_Connection=true;MultipleActiveResultSets=true;";
