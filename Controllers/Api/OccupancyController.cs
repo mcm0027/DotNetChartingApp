@@ -12,10 +12,18 @@ namespace ChartingProject.Controllers.Api
     [Route("api/occupancy")]
     public class OccupancyController : Controller
     {
+        private IChartistRepository _repository;
+
+        public OccupancyController(IChartistRepository repository)
+        {
+            _repository = repository;
+        }
+
         [HttpGet("")]
         public JsonResult Get()
         {
-            return Json(new { name = "Matt" });
+            var results = _repository.GetOccupancies();
+            return Json(results);
         }
 
         [HttpPost("")]

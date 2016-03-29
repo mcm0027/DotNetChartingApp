@@ -56,6 +56,9 @@
     }
 ];
 
+    $.get("../api/occupancy", function (d) {
+        console.log(d);
+    });
 
     // month picker functionality
 
