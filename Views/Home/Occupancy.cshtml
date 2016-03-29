@@ -1,4 +1,5 @@
-﻿@{
+﻿@model IEnumerable<ChartingProject.Models.Occupancy>
+@{
     ViewData["Title"] = "Occupancy Rates";
 }
 @section Scripts {
@@ -14,9 +15,9 @@
     <div id="sidebar-wrapper">
         <ul class="sidebar-nav">
             <li class="sidebar-brand">
-                <a href="#">
+                <h2>
                     Options
-                </a>
+                </h2>
             </li>
             <li>
                 <div class="form-group">
@@ -30,6 +31,12 @@
     <div class="col-md-offset-2 col-md-8">
         <div class="ct-chart ct-major-third"></div>
     </div>
+<ul>
+    @foreach (var occupancy in Model)
+    {
+        <li>@occupancy.Month</li>
+    }
+</ul>
     <div class="row">
         <footer class="col-md-12">
             <hr />

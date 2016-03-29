@@ -9,11 +9,11 @@ namespace ChartingProject.Controllers
 {
     public class HomeController : Controller
     {
-        private ChartingContext _context;
+        private IChartistRepository _repository;
 
-        public HomeController(ChartingContext context)
+        public HomeController(IChartistRepository repository)
         {
-            _context = context;
+            _repository = repository;
         }
 
         public IActionResult Index()
@@ -24,7 +24,8 @@ namespace ChartingProject.Controllers
         public IActionResult Occupancy()
         {
             ViewData["Message"] = "The average occupancy rate by week.";
-            var occupancies = _context.Occupancies;
+            var occupancies = _repository.GetOccupancies();
+
             return View(occupancies);
         }
 
